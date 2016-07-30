@@ -1,0 +1,29 @@
+@import reset
+.header
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  margin: 0 4px
+.cover
+  position: relative
+  margin: 0 auto
+  padding: 4px
+  border: 2px #252 solid
+.cover:after
+  content: ""
+  display: table
+  clear: both
+[class*='article-']
+  float: left
+.article-one
+  width: 50%
+.article-two
+  width: 50%
+.article-three
+  width: 25%
+.article-four
+  width: 25%
+*, *:after, *:before
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
