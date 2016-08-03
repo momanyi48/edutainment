@@ -49,37 +49,116 @@ table {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 0 4px; }
+  margin: 0 4px;
+  height: 72px; }
+
+html {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0; }
+
+img {
+  width: 100%;
+  height: 100%; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
 
 .cover {
-  position: relative;
-  margin: 0 auto;
-  padding: 4px;
-  border: 2px #252 solid; }
+  width: 100%;
+  max-height: 560px;
+  margin: 0 auto; }
 
-.cover:after {
-  content: "";
-  display: table;
+.cover:before, .cover:after, .article:before, .article:after {
+  content: " ";
+  display: table; }
+
+.cover:after, .article::after {
   clear: both; }
 
-[class*='article-'] {
-  float: left; }
+[class*="article-"] {
+  position: relative;
+  width: 100%;
+  float: left;
+  min-height: 1px; }
 
-.article-one {
-  width: 50%; }
+.content {
+  margin: 8px;
+  border: 1px #222 Solid;
+  text-align: center; }
 
-.article-two {
-  width: 50%; }
-
-.article-three {
+.article-1 {
   width: 25%; }
 
-.article-four {
-  width: 25%; }
+.article-2 {
+  width: 50%; }
 
-*, *:after, *:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+.article-3 {
+  width: 75%; }
+
+.article-4 {
+  width: 100%; }
+
+@media screen and (max-width: 768px) {
+  .article-1 {
+    width: 50%; }
+
+  .article-2 {
+    width: 100%; }
+
+  .article-4 {
+    width: 100%; } }
+@media screen and (max-width: 384px) {
+  .article-1 {
+    width: 100%; }
+
+  .article-2 {
+    width: 100%; }
+
+  .article-4 {
+    width: 100%; } }
+.container {
+  max-width: 1100px;
+  margin: 0 auto; }
+
+.space-btm {
+  margin-bottom: 24px; }
+
+.content h1 {
+  position: absolute;
+  bottom: 80px;
+  text-align: left;
+  padding-left: 18px;
+  padding-right: 18px;
+  font-family: "Montserrat", sans-serif; }
+
+.article-one .content h1 {
+  font-size: 32px;
+  letter-spacing: -0.015em;
+  font-weight: bold;
+  text-transform: none; }
+
+@media screen and (max-width: 1000px) {
+  .article-one .content h1 {
+    bottom: 10px; } }
+.article-two .content h1 {
+  bottom: 40px;
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: none; }
+
+.article-three .content h1 {
+  bottom: 30px;
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: none; }
+
+.article-four .content h1 {
+  bottom: 30px;
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: none; }
 
 /*# sourceMappingURL=style.css.map */

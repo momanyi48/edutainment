@@ -1,0 +1,34 @@
+html
+  box-sizing: border-box
+body
+  margin: 0
+  padding: 0
+img
+  width: 100%
+*,*:before,*:after
+  box-sizing: inherit
+.grid
+  width: 100%
+  max-width: 1140px
+  margin: 0 auto
+.grid:before,.grid:after,.row:before,.row:after
+  content: " "
+  display: table
+.grid:after,.row::after
+  clear: both
+[class*="col-"]
+  width: 100%
+  float: left
+  min-height: 1px
+.col
+  margin: 8px
+  border: 1px #222 Solid
+  text-align: center
+.col-1
+  width: 25%
+.col-2
+  width: 50%
+.col-3
+  width: 75%
+.col-4
+  width: 100%
